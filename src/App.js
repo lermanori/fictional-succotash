@@ -22,7 +22,7 @@ const App = () => {
   const [orderNumber, setOrderNumber] = useState(null); // Store generated order number
 
   useEffect(() => {
-    axios.get('/data/data.xml')
+    axios.get('/fictional-succotash/data/data.xml')
       .then(response => {
         parseString(response.data, (err, result) => {
           const products = result.rss.channel[0].item.map(item => {
