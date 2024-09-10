@@ -2,6 +2,7 @@
   "name": "xml-prototype",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://lermanori.github.io/fictional-succotash/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -20,7 +21,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build && mv build docs",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
